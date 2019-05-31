@@ -91,8 +91,8 @@ int main(int argc, char *argv[]){
     printf("Input values into the 1st matrix: \n");
    
 //Setup for Matrix A  
-    for(i = 0; i < NR_ROWS; i++){
-        for(j = 0; j < NR_COLUMNS; j++){
+    for(i = 0; i < rows_1; i++){
+        for(j = 0; j < columns_1; j++){
             scanf("%d", &A[i][j]);
 
         }
@@ -100,8 +100,8 @@ int main(int argc, char *argv[]){
     
     printf("\n");
     
-    for(i = 0; i < NR_ROWS; i++){
-        for(j = 0; j < NR_COLUMNS; j++){
+    for(i = 0; i < rows_1; i++){
+        for(j = 0; j < columns_1; j++){
             printf("%d ", A[i][j]);
 			
         }
@@ -114,8 +114,8 @@ int main(int argc, char *argv[]){
 	
    printf("\n Input values into the 2st matrix: \n");
    
-    for(i = 0; i < NR_ROWS; i++){
-        for(j = 0; j < NR_COLUMNS; j++){
+    for(i = 0; i < rows_2; i++){
+        for(j = 0; j < columns_2; j++){
             scanf("%d", &B[i][j]);
 
         }
@@ -123,13 +123,19 @@ int main(int argc, char *argv[]){
     
     printf("\n");
     
-    for(i = 0; i < NR_ROWS; i++){
-        for(j = 0; j < NR_COLUMNS; j++){
+    for(i = 0; i < rows_2; i++){
+        for(j = 0; j < columns_2; j++){
             printf("%d ", B[i][j]);
 			
         }
 	    printf("\n");  
     }//OUTPUT MATRIX B
+	
+// Checking if operations are possible
+	if( columns_1 == rows_2){
+		printf("Operations are not possible as the columns of the 1st matrix is not equal to the rows of the 2nd matrix.");
+		exit(1); // if operations are not possible, we exit the calculator
+	}
     
      printf("\n");
     

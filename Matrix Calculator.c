@@ -2,14 +2,13 @@
 #include <stdlib.h>
 
 // Matrix Addition- Practice Project 1 
-#define NR_ROWS		3
-#define NR_COLUMNS	3
+#define SIZE 10
 
-void addition(int A[][NR_COLUMNS], int B[][NR_COLUMNS]){
+void addition(int A[][SIZE], int B[][SIZE], int rows, int columns){
 	int i, j, sum;
 	
-	for(i = 0; i < NR_ROWS; i++){
-	    for(j = 0; j < NR_COLUMNS; j++){
+	for(i = 0; i < rows; i++){
+	    for(j = 0; j < columns; j++){
     		sum = A[i][j] + B[i][j];
 			printf("%d ", sum);
 		}
@@ -18,11 +17,11 @@ void addition(int A[][NR_COLUMNS], int B[][NR_COLUMNS]){
 	
 }
 
-void subtraction(int A[][NR_COLUMNS],int B[][NR_COLUMNS]){
+void subtraction(int A[][SIZE],int B[][SIZE], int rows, int columns){
 	int i, j, difference;
 
-	for(i = 0; i < NR_ROWS; i++){
-		for(j = 0; j < NR_COLUMNS; j++){
+	for(i = 0; i < rows; i++){
+		for(j = 0; j < columns; j++){
 			difference = A[i][j] - B[i][j];
 			printf("%d ", difference);	
 		}
@@ -31,17 +30,17 @@ void subtraction(int A[][NR_COLUMNS],int B[][NR_COLUMNS]){
 		    
 }
 
-void multiplication(int A[][NR_COLUMNS], int B[][NR_COLUMNS]){
+void multiplication(int A[][SIZE], int B[][SIZE], int rows, int columns){
 	int i, j; 
 	
 	
 }
 
-void swap(int A[][NR_COLUMNS], int B[][NR_COLUMNS]){
+void swap(int A[][SIZE], int B[][SIZE], int rows, int columns){
 	int i, j, temp;
 	
-	for( i = 0; i < NR_ROWS; i++){
-		for(j = 0; j < NR_COLUMNS; j ++){
+	for( i = 0; i < rows; i++){
+		for(j = 0; j < columns; j ++){
 			temp = A[i][j];
 			A[i][j] = B[i][j];
 			B[i][j] = temp; 
@@ -50,8 +49,8 @@ void swap(int A[][NR_COLUMNS], int B[][NR_COLUMNS]){
 	} 
 
 	printf("Matrix A: \n");
-	for( i = 0; i < NR_ROWS; i++){
-		for(j = 0; j < NR_COLUMNS; j ++){
+	for( i = 0; i < rows; i++){
+		for(j = 0; j < columns; j ++){
 			printf("%d", A[i][j]);
 		}
 		printf("\n");
@@ -60,8 +59,8 @@ void swap(int A[][NR_COLUMNS], int B[][NR_COLUMNS]){
 	printf("\n");
 	
 	printf("Matrix B: \n");
-	for( i = 0; i < NR_ROWS; i++){
-		for(j = 0; j < NR_COLUMNS; j ++){
+	for( i = 0; i < rows; i++){
+		for(j = 0; j < columns; j ++){
 			printf("%d", B[i][j]);
 		}
 		printf("\n");
@@ -70,7 +69,7 @@ void swap(int A[][NR_COLUMNS], int B[][NR_COLUMNS]){
 }
 
 int main(int argc, char *argv[]){
-    int  i, j, A[NR_ROWS][NR_COLUMNS], B[NR_ROWS][NR_COLUMNS];
+    int  i, j, rows_1, columns_1, rows_2, columns_2, A[NR_ROWS][NR_COLUMNS], B[NR_ROWS][NR_COLUMNS];
 	int sum, difference, multi;
 	char oper;
                                                                           
@@ -86,7 +85,9 @@ int main(int argc, char *argv[]){
 	}				
 	
 /**Matrix Input Functionality**/
-
+    printf("Input size of Matrix 1: \n");
+    scanf("%d %d", rows_1, columns_1);
+	
     printf("Input values into the 1st matrix: \n");
    
 //Setup for Matrix A  
@@ -108,7 +109,9 @@ int main(int argc, char *argv[]){
     }//OUTPUT MATRIX A
     
 //Setup for Matrix B
-   
+   printf("Input size of Matrix 2: \n");
+   scanf("%d %d", rows_2, columns_2);
+	
    printf("\n Input values into the 2st matrix: \n");
    
     for(i = 0; i < NR_ROWS; i++){

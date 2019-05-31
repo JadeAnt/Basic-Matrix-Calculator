@@ -69,7 +69,7 @@ void swap(int A[][SIZE], int B[][SIZE], int rows, int columns){
 }
 
 int main(int argc, char *argv[]){
-    int  i, j, rows_1, columns_1, rows_2, columns_2, A[NR_ROWS][NR_COLUMNS], B[NR_ROWS][NR_COLUMNS];
+    int  i, j, rows, columns, rows_1, columns_1, rows_2, columns_2, A[NR_ROWS][NR_COLUMNS], B[NR_ROWS][NR_COLUMNS];
 	int sum, difference, multi;
 	char oper;
                                                                           

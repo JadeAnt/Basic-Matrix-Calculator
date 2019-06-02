@@ -4,11 +4,11 @@
 // Matrix Addition- Practice Project 1 
 #define SIZE 10
 
-void addition(int A[][SIZE], int B[][SIZE], int rows, int columns){
+void addition(int A[][SIZE], int B[][SIZE]){
 	int i, j, sum;
 	
-	for(i = 0; i < rows; i++){
-	    for(j = 0; j < columns; j++){
+	for(i = 0; i < SIZE; i++){
+	    for(j = 0; j < SIZE; j++){
     		sum = A[i][j] + B[i][j];
 			printf("%d ", sum);
 		}
@@ -17,11 +17,11 @@ void addition(int A[][SIZE], int B[][SIZE], int rows, int columns){
 	
 }
 
-void subtraction(int A[][SIZE],int B[][SIZE], int rows, int columns){
+void subtraction(int A[][SIZE],int B[][SIZE]){
 	int i, j, difference;
 
-	for(i = 0; i < rows; i++){
-		for(j = 0; j < columns; j++){
+	for(i = 0; i < SIZE; i++){
+		for(j = 0; j < SIZE; j++){
 			difference = A[i][j] - B[i][j];
 			printf("%d ", difference);	
 		}
@@ -178,16 +178,7 @@ int main(int argc, char *argv[]){
 		    
 		case '*':
 			
-			printf("Multiplication: \n");
-			/*
-			for(i = 0; i < NR_ROWS; i++){
-		        for(j = 0; j < NR_COLUMNS; j++){
-		            multi = A[i][j] * B[i][i];
-					printf("%d ", multi);	
-		        }
-			    printf("\n");
-		    }//OUTPUT MULTIPLICATION OF MATRICIES
-		    */
+		    printf("Multiplication: \n");
 		    multiplication(A,B);
 		    break;
 		

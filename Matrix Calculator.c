@@ -79,7 +79,7 @@ int main(int argc, char *argv[]){
 	printf("Operation (+/-/*/s[swap]):");
 	scanf("%c", &oper);
 	
-	if(oper != '+' && oper != '-' && oper != 's'){
+	if(oper != '+' && oper != '-' && oper != 's' && oper != '*'){
 		printf("Operation is not valid.\n");
 		return 0;
 	}				

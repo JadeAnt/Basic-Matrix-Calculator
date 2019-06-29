@@ -32,7 +32,7 @@ void subtraction(int A[][SIZE],int B[][SIZE]){
 
 void multiplication(int A[][SIZE], int B[][SIZE], int rows, int columns){
 	int i, j; 
-	
+	//Must complete method 
 	
 }
 

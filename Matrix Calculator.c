@@ -132,7 +132,7 @@ int main(int argc, char *argv[]){
     }//OUTPUT MATRIX B
 	
 // Checking if operations are possible
-	if( columns_1 == rows_2){
+	if( columns_1 != rows_2){
 		printf("Operations are not possible as the columns of the 1st matrix is not equal to the rows of the 2nd matrix.");
 		exit(1); // if operations are not possible, we exit the calculator
 	}
